@@ -8,9 +8,8 @@
 4. **Results & Visual Comparisons**
 5. **How to Interpret the Benchmarks**
 6. **Best Practices & Recommendations**
-7. **Limitations & Future Work**
-8. **Conclusion**
-9. **Q&A / References**
+7. **Conclusion**
+8. **References**
 
 ---
 
@@ -37,11 +36,11 @@
 
 ## 3. Benchmark Methodology
 
-- **Tasks Evaluated**
+- **Tasks Researched**
   - Code Review, Bug Detection, Code Summarization, Code Q&A
 - **Benchmark Data Sources**
   - OpenAI, Anthropic, HuggingFace pricing
-  - Peer-reviewed papers ([see references](#qareferences))
+  - Rreviewed papers ([see references](#qareferences))
 - **Metrics Measured**
   - Token usage per task
   - Cost per task (USD)
@@ -83,15 +82,7 @@
 
 ---
 
-## 7. Limitations & Future Work
-
-- Benchmarks reflect typical tasks and may vary by codebase/language/model updates.
-- Some quality scores (human evals) are subjective; consider custom side-by-side review.
-- Future updates: add benchmarks for Java/C#/other languages, more open-source models, novel tasks (e.g., test generation).
-
----
-
-## 8. Conclusion
+## 7. Conclusion
 
 - Task-specific AI models deliver substantial efficiency and cost benefits in common developer workflows—often without loss of output quality.
 - Smart model selection empowers teams to scale code automation, review, and bug finding economically.
@@ -99,9 +90,8 @@
 
 ---
 
-## 9. Q&A / References
+## 8. References
 
-- **Questions?** Open floor.
 - **References:**
   - [OpenAI GPT-4 Pricing](https://openai.com/pricing)
   - [Anthropic Claude Pricing](https://www.anthropic.com/api)
