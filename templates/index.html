@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AI Model Comparison (Code Tasks)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Model Efficiency: Task Comparison</h1>
+        <form method="POST">
+            <label for="task">Select a Task:</label>
+            <select name="task" id="task" onchange="this.form.submit()">
+                {% for key, val in tasks.items() %}
+                    <option value="{{key}}" {% if key == selected_task %}selected{% endif %}>{{val}}</option>
+                {% endfor %}
+            </select>
+        </form>
+        <hr>
+        <h2>{{ bench.task }}</h2>
+        <p><b>Summary:</b> {{ bench.summary }}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Tokens/Run</th>
+                    <th>Cost/Run ($)</th>
+                    <th>Quality</th>
+                    <th>Citation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for model in bench.models %}
+                <tr>
+                    <td>{{ model.name }}</td>
+                    <td>
+                        {% if model.tokens_per_review %}{{ model.tokens_per_review }}{% endif %}
+                        {% if model.tokens_per_summary %}{{ model.tokens_per_summary }}{% endif %}
+                        {% if model.tokens_per_detection %}{{ model.tokens_per_detection }}{% endif %}
+                        {% if model.tokens_per_qa %}{{ model.tokens_per_qa }}{% endif %}
+                    </td>
+                    <td>
+                        {% if model.cost_per_review %}{{ '%0.5f'|format(model.cost_per_review) }}{% endif %}
+                        {% if model.cost_per_summary %}{{ '%0.5f'|format(model.cost_per_summary) }}{% endif %}
+                        {% if model.cost_per_detection %}{{ '%0.5f'|format(model.cost_per_detection) }}{% endif %}
+                        {% if model.cost_per_qa %}{{ '%0.5f'|format(model.cost_per_qa) }}{% endif %}
+                    </td>
+                    <td>{{ model.quality }}</td>
+                    <td><a href="{{ model.source }}" target="_blank">[source]</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h3>References:</h3>
+        <ul>
+            {% for src in bench.sources %}
+            <li><a href="{{ src }}" target="_blank">{{ src }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
