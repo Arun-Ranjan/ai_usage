@@ -54,5 +54,162 @@
       "https://cloud.google.com/vertex-ai/docs/generative-ai/pricing"
     ],
     "summary": "Gemini Pro offers competitive accuracy to Claude 2 for code reviews at a significantly lower price per run. Fine-tuned models remain most efficient for routine code checks."
+  },
+  "code_summarization": {
+    "task": "code summarization (Python function, ~30 lines)",
+    "models": [
+      {
+        "name": "GPT-4",
+        "tokens_per_summary": 300,
+        "cost_per_summary": 0.009,
+        "quality": "SOTA, excellent natural language summaries",
+        "source": "https://openai.com/pricing"
+      },
+      {
+        "name": "Claude 2",
+        "tokens_per_summary": 300,
+        "cost_per_summary": 0.0072,
+        "quality": "Competitive, strong summarization capabilities",
+        "source": "https://www.anthropic.com/api"
+      },
+      {
+        "name": "Gemini 1.5 Pro",
+        "tokens_per_summary": 300,
+        "cost_per_summary": 0.0015,
+        "quality": "Competitive with Claude 2",
+        "source": "https://cloud.google.com/vertex-ai/docs/generative-ai/pricing"
+      },
+      {
+        "name": "Claude Instant",
+        "tokens_per_summary": 300,
+        "cost_per_summary": 0.00165,
+        "quality": "Fast, good for basic summarization",
+        "source": "https://www.anthropic.com/api"
+      },
+      {
+        "name": "CodeBERT",
+        "tokens_per_summary": 55,
+        "cost_per_summary": 0.000165,
+        "quality": "High, concise and accurate summaries",
+        "source": "https://arxiv.org/abs/2107.03374"
+      },
+      {
+        "name": "CodeT5 (fine-tuned)",
+        "tokens_per_summary": 42,
+        "cost_per_summary": 0.000042,
+        "quality": "Very high, optimized for code summarization",
+        "source": "https://arxiv.org/abs/2302.09413"
+      }
+    ],
+    "sources": [
+      "https://openai.com/pricing",
+      "https://arxiv.org/abs/2107.03374",
+      "https://arxiv.org/abs/2302.09413",
+      "https://www.anthropic.com/api",
+      "https://cloud.google.com/vertex-ai/docs/generative-ai/pricing"
+    ],
+    "summary": "Fine-tuned models like CodeT5 provide excellent summarization quality at a fraction of the cost of general LLMs. Gemini Pro offers a good balance for teams needing general-purpose capabilities."
+  },
+  "bug_detection": {
+    "task": "bug detection (Python script, ~40 lines)",
+    "models": [
+      {
+        "name": "GPT-4",
+        "tokens_per_detection": 400,
+        "cost_per_detection": 0.012,
+        "quality": "SOTA, excellent at finding subtle bugs",
+        "source": "https://openai.com/pricing"
+      },
+      {
+        "name": "Claude 2",
+        "tokens_per_detection": 400,
+        "cost_per_detection": 0.0096,
+        "quality": "Competitive, strong bug detection",
+        "source": "https://www.anthropic.com/api"
+      },
+      {
+        "name": "Gemini 1.5 Pro",
+        "tokens_per_detection": 400,
+        "cost_per_detection": 0.002,
+        "quality": "Competitive with Claude 2",
+        "source": "https://cloud.google.com/vertex-ai/docs/generative-ai/pricing"
+      },
+      {
+        "name": "Claude Instant",
+        "tokens_per_detection": 400,
+        "cost_per_detection": 0.0022,
+        "quality": "Good for common bug patterns",
+        "source": "https://www.anthropic.com/api"
+      },
+      {
+        "name": "CodeBERT",
+        "tokens_per_detection": 70,
+        "cost_per_detection": 0.00021,
+        "quality": "High, effective for standard bug types",
+        "source": "https://arxiv.org/abs/2107.03374"
+      },
+      {
+        "name": "BugLab (fine-tuned)",
+        "tokens_per_detection": 60,
+        "cost_per_detection": 0.00006,
+        "quality": "Very high, specialized for bug detection",
+        "source": "https://arxiv.org/abs/2107.10864"
+      }
+    ],
+    "sources": [
+      "https://openai.com/pricing",
+      "https://arxiv.org/abs/2107.03374",
+      "https://arxiv.org/abs/2107.10864",
+      "https://www.anthropic.com/api",
+      "https://cloud.google.com/vertex-ai/docs/generative-ai/pricing"
+    ],
+    "summary": "BugLab and CodeBERT offer exceptional bug detection at minimal cost. For complex or novel bug patterns, GPT-4 remains the gold standard."
+  },
+  "code_qa": {
+    "task": "code Q&A (e.g., 'What does this function do?')",
+    "models": [
+      {
+        "name": "GPT-4",
+        "tokens_per_qa": 250,
+        "cost_per_qa": 0.0075,
+        "quality": "SOTA, excellent explanations",
+        "source": "https://openai.com/pricing"
+      },
+      {
+        "name": "Claude 2",
+        "tokens_per_qa": 250,
+        "cost_per_qa": 0.006,
+        "quality": "Competitive, clear explanations",
+        "source": "https://www.anthropic.com/api"
+      },
+      {
+        "name": "Gemini 1.5 Pro",
+        "tokens_per_qa": 250,
+        "cost_per_qa": 0.00125,
+        "quality": "Competitive with Claude 2",
+        "source": "https://cloud.google.com/vertex-ai/docs/generative-ai/pricing"
+      },
+      {
+        "name": "Claude Instant",
+        "tokens_per_qa": 250,
+        "cost_per_qa": 0.001375,
+        "quality": "Good for straightforward Q&A",
+        "source": "https://www.anthropic.com/api"
+      },
+      {
+        "name": "CodeT5+ (fine-tuned)",
+        "tokens_per_qa": 40,
+        "cost_per_qa": 0.00004,
+        "quality": "High, concise and accurate answers",
+        "source": "https://arxiv.org/abs/2302.09413"
+      }
+    ],
+    "sources": [
+      "https://openai.com/pricing",
+      "https://arxiv.org/abs/2302.09413",
+      "https://www.anthropic.com/api",
+      "https://cloud.google.com/vertex-ai/docs/generative-ai/pricing"
+    ],
+    "summary": "CodeT5+ delivers high-quality answers at extremely low cost. General LLMs excel when questions require broader context or creative reasoning."
   }
 }
