@@ -56,13 +56,40 @@
 
 - **Interactive Demo:** (show UI)
   - Select task, view side-by-side model comparison (tokens, cost, quality, source links)
-- **Summary Table Example:**  
-  | Model             | Code Review Tokens | Cost ($)    | Quality    | Citation                        |
-  |-------------------|-------------------|-------------|------------|----------------------------------|
-  | GPT-4             | 700               | 0.021       | SOTA       | [OpenAI](https://openai.com/pricing) |
-  | Claude 2          | 700               | 0.0168      | Competitive| [Anthropic](https://www.anthropic.com/api) |
-  | CodeBERT (FT)     | 120               | 0.00036     | Very High  | [CodeBERT](https://arxiv.org/abs/2107.03374) |
-  - Similar tables for bug detection, summarization, and Q&A
+- **Code Review Summary Table:**  
+  | Model             | Tokens | Cost ($)    | Quality    | Citation                        |
+  |-------------------|--------|-------------|------------|----------------------------------|
+  | GPT-4             | 700    | 0.021       | SOTA       | [OpenAI](https://openai.com/pricing) |
+  | Claude 2          | 700    | 0.0168      | Competitive| [Anthropic](https://www.anthropic.com/api) |
+  | Claude Instant    | 700    | 0.00467     | Fast       | [Anthropic](https://www.anthropic.com/api) |
+  | CodeBERT (FT)     | 120    | 0.00036     | Very High  | [CodeBERT](https://arxiv.org/abs/2107.03374) |
+  | CodeT5+ (FT)      | 100    | 0.0001      | High       | [CodeT5+](https://arxiv.org/abs/2302.09413) |
+
+- **Code Summarization Summary Table:**  
+  | Model             | Tokens | Cost ($)    | Quality    | Citation                        |
+  |-------------------|--------|-------------|------------|----------------------------------|
+  | GPT-4             | 300    | 0.009       | SOTA       | [OpenAI](https://openai.com/pricing) |
+  | Claude 2          | 300    | 0.0072      | Good       | [Anthropic](https://www.anthropic.com/api) |
+  | Claude Instant    | 300    | 0.002001    | Faster     | [Anthropic](https://www.anthropic.com/api) |
+  | CodeBERT (FT)     | 55     | 0.000165    | Good       | [CodeBERT](https://arxiv.org/abs/2002.08155) |
+  | CodeT5 (FT)       | 42     | 0.000042    | Excellent  | [CodeT5](https://arxiv.org/abs/2109.00859) |
+
+- **Bug Detection Summary Table:**  
+  | Model             | Tokens | Cost ($)    | Quality    | Citation                        |
+  |-------------------|--------|-------------|------------|----------------------------------|
+  | GPT-4             | 400    | 0.012       | SOTA       | [OpenAI](https://openai.com/pricing) |
+  | Claude 2          | 400    | 0.0096      | Competitive| [Anthropic](https://www.anthropic.com/api) |
+  | Claude Instant    | 400    | 0.00284     | Routine    | [Anthropic](https://www.anthropic.com/api) |
+  | CodeBERT (FT)     | 70     | 0.00021     | High       | [CodeBERT](https://arxiv.org/abs/2002.08155) |
+  | BugLab (FT)       | 60     | 0.00006     | Excellent  | [BugLab](https://arxiv.org/abs/2107.10864) |
+
+- **Code Q&A Summary Table:**  
+  | Model             | Tokens | Cost ($)    | Quality    | Citation                        |
+  |-------------------|--------|-------------|------------|----------------------------------|
+  | GPT-4             | 250    | 0.0075      | SOTA       | [OpenAI](https://openai.com/pricing) |
+  | Claude 2          | 250    | 0.006       | Competitive| [Anthropic](https://www.anthropic.com/api) |
+  | Claude Instant    | 250    | 0.001375    | Basic      | [Anthropic](https://www.anthropic.com/api) |
+  | CodeT5+ (FT)      | 40     | 0.00004     | Accurate   | [CodeT5+](https://arxiv.org/abs/2302.09413) |
 
 ---
 
