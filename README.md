@@ -54,15 +54,26 @@ The web interface features a **dropdown menu** that lets users switch between fo
 
 ### Comparison Table
 
-For each task, the UI displays a comprehensive comparison table showing:
+For each task, the UI displays a comprehensive comparison table with the following columns:
 
-| Column | Description |
-|--------|-------------|
-| **Model** | Name of the AI model (e.g., GPT-4, Claude 2, CodeBERT) |
-| **Tokens/Run** | Average total tokens (input + output) used per task execution |
-| **Cost/Run ($)** | Dollar cost per single task execution, calculated from official API pricing |
-| **Quality** | Qualitative assessment based on published benchmarks (SOTA, High, Competitive, etc.) |
-| **Citation** | Link to source documentation or research paper |
+- **Model**: Name of the AI model (e.g., GPT-4, Claude 2, CodeBERT)
+- **Tokens/Run**: Average total tokens (input + output) used per task execution
+- **Cost/Run ($)**: Dollar cost per single task execution, calculated from official API pricing
+- **Quality**: Qualitative assessment based on published benchmarks (SOTA, High, Competitive, etc.)
+- **Citation**: Link to source documentation or research paper
+
+#### Example: Code Review Comparison
+
+| Model | Tokens/Run | Cost/Run ($) | Quality | Citation |
+|-------|------------|--------------|---------|----------|
+| GPT-4 | 700 | 0.021 | SOTA, highest accuracy for complex tasks | [OpenAI Pricing](https://openai.com/pricing) |
+| Claude 2 | 700 | 0.0168 | Competitive with GPT-3.5, capable on code review | [Anthropic API](https://www.anthropic.com/api) |
+| Gemini 1.5 Pro | 700 | 0.0035 | Competitive with GPT-3.5/Claude 2 | [Google Cloud](https://cloud.google.com/vertex-ai/docs/generative-ai/pricing) |
+| Claude Instant | 700 | 0.00467 | Very fast, best for routine checks | [Anthropic API](https://www.anthropic.com/api) |
+| CodeBERT (fine-tuned) | 120 | 0.00036 | Very high, within 1-2 points of GPT-4 | [CodeBERT Paper](https://arxiv.org/abs/2107.03374) |
+| CodeT5+ (fine-tuned) | 100 | 0.0001 | High, nearly matches GPT-4 | [CodeT5+ Paper](https://arxiv.org/abs/2302.09413) |
+
+**Key Insight**: CodeT5+ delivers 99.5% cost savings compared to GPT-4 while maintaining high quality for routine code reviews.
 
 ### Summary Statement
 
